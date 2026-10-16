@@ -1,0 +1,262 @@
+.site-header {
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 1000 !important;
+  width: 100%;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.14);
+  background: rgba(12, 15, 22, 0.45);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+}
+
+.header-container {
+  width: min(1200px, 90%);
+  min-height: 84px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #ffffff !important;
+  text-decoration: none;
+  flex-shrink: 0;
+}
+
+.brand-icon {
+  display: grid;
+  place-items: center;
+  width: 42px;
+  height: 42px;
+  border: 1px solid #3b6df6;
+  border-radius: 4px;
+  color: #5b82ff;
+  font-family: Georgia, serif;
+  font-size: 27px;
+  transition:
+    background 0.25s ease,
+    color 0.25s ease,
+    border-color 0.25s ease;
+}
+
+.brand:hover .brand-icon {
+  background: #3b6df6;
+  border-color: #3b6df6;
+  color: #ffffff;
+}
+
+.brand-name {
+  display: flex;
+  flex-direction: column;
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  line-height: 1.2;
+}
+
+.brand-name small {
+  margin-top: 5px;
+  color: #8ca7ff;
+  font-size: 9px;
+  font-weight: 500;
+  letter-spacing: 2.5px;
+}
+
+.main-nav {
+  display: flex;
+  align-items: center;
+  gap: 34px;
+}
+
+.main-nav a {
+  position: relative;
+  padding: 8px 0;
+  color: rgba(255, 255, 255, 0.78) !important;
+  font-size: 13px;
+  font-weight: 500;
+  text-decoration: none;
+  transition: color 0.25s ease;
+}
+
+.main-nav a::after {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  height: 2px;
+  background: #4b74ff;
+  content: "";
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.25s ease;
+}
+
+.main-nav a:hover {
+  color: #ffffff !important;
+}
+
+.main-nav a:hover::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+.header-cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  padding: 13px 19px;
+  border: 1px solid #4b74ff;
+  border-radius: 4px;
+  background: #3b6df6;
+  color: #ffffff !important;
+  font-size: 12px;
+  font-weight: 600;
+  text-decoration: none;
+  white-space: nowrap;
+  transition:
+    background 0.25s ease,
+    border-color 0.25s ease,
+    transform 0.25s ease;
+}
+
+.header-cta span {
+  color: #ffffff !important;
+  transition: transform 0.25s ease;
+}
+
+.header-cta:hover {
+  border-color: #5d83ff;
+  background: #2857dc;
+  transform: translateY(-2px);
+}
+
+.header-cta:hover span {
+  transform: translateX(3px);
+}
+
+@media (max-width: 900px) {
+  .header-container {
+    width: 92%;
+    gap: 18px;
+  }
+
+  .main-nav {
+    gap: 20px;
+  }
+
+  .brand-name {
+    font-size: 18px;
+    letter-spacing: 2.5px;
+  }
+
+  .header-cta {
+    gap: 9px;
+    padding: 12px 14px;
+  }
+}
+
+@media (max-width: 700px) {
+  .site-header {
+    background: rgba(12, 15, 22, 0.85);
+  }
+
+  .header-container {
+    min-height: auto;
+    flex-wrap: wrap;
+    gap: 12px;
+    padding: 14px 0 10px;
+  }
+
+  .brand {
+    gap: 8px;
+  }
+
+  .brand-icon {
+    width: 36px;
+    height: 36px;
+    font-size: 23px;
+  }
+
+  .brand-name {
+    font-size: 17px;
+    letter-spacing: 2px;
+  }
+
+  .brand-name small {
+    margin-top: 3px;
+    font-size: 8px;
+    letter-spacing: 2px;
+  }
+
+  .main-nav {
+    order: 3;
+    width: 100%;
+    justify-content: center;
+    gap: clamp(16px, 5vw, 28px);
+    padding: 10px 0 4px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .main-nav a {
+    font-size: 12px;
+  }
+
+  .header-cta {
+    padding: 10px 12px;
+    font-size: 11px;
+  }
+}
+
+@media (max-width: 420px) {
+  .header-container {
+    width: 92%;
+  }
+
+  .brand-icon {
+    width: 32px;
+    height: 32px;
+    font-size: 21px;
+  }
+
+  .brand-name {
+    font-size: 15px;
+    letter-spacing: 1.5px;
+  }
+
+  .brand-name small {
+    font-size: 7px;
+    letter-spacing: 1.5px;
+  }
+
+  .header-cta {
+    gap: 6px;
+    padding: 9px 10px;
+    font-size: 10px;
+  }
+
+  .main-nav {
+    gap: 0;
+    justify-content: space-between;
+  }
+
+  .main-nav a {
+    font-size: 11px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .brand-icon,
+  .main-nav a,
+  .main-nav a::after,
+  .header-cta,
+  .header-cta span {
+    transition: none;
+  }
+}
