@@ -381,14 +381,6 @@ function CarDetailsPage({
       <Header />
 
       <main className="car-details" ref={pageRef}>
-        <div className="car-breadcrumb">
-          <Link to="/">Home</Link>
-          <span>/</span>
-          <Link to="/fleet">The Fleet</Link>
-          <span>/</span>
-          <span>Vehicle Details</span>
-        </div>
-
         <section className="car-hero">
           <div className="car-gallery">
             <div className="car-gallery-main">

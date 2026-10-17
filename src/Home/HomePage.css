@@ -1,5 +1,6 @@
 /* =========================================
-   VELOX MARRAKECH — MINIMALIST CONTEMPORARY
+   VELOX MARRAKECH — HOME PAGE
+   Minimalist Contemporary Design
    White / Light Gray / Black / Cobalt Blue
 ========================================= */
 
@@ -12,6 +13,7 @@
   --velox-muted: #737987;
   --velox-border: #e6e8ed;
   --velox-surface: #f7f8fa;
+  --velox-blue-soft: #eef3ff;
 
   width: 100%;
   min-height: 100vh;
@@ -59,7 +61,7 @@
    HERO SECTION
 ========================================= */
 
-.hero-section {
+.home-page .hero-section {
   position: relative;
   isolation: isolate;
   display: flex;
@@ -67,30 +69,32 @@
   min-height: 690px;
   height: min(800px, 88vh);
   padding: 100px 8%;
+  overflow: hidden;
   background:
     linear-gradient(
       90deg,
-      rgba(10, 14, 22, 0.88) 0%,
-      rgba(10, 14, 22, 0.64) 43%,
-      rgba(10, 14, 22, 0.12) 100%
+      rgb(10 14 22 / 88%) 0%,
+      rgb(10 14 22 / 64%) 43%,
+      rgb(10 14 22 / 12%) 100%
     ),
-    url("https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=2000&q=90")
+    url("https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=2000&q=85")
       center 55% / cover no-repeat;
 }
 
-.hero-overlay {
+.home-page .hero-overlay {
   position: absolute;
   z-index: -1;
   inset: 0;
   background: linear-gradient(
     0deg,
-    rgba(10, 14, 22, 0.48) 0%,
+    rgb(10 14 22 / 48%) 0%,
     transparent 45%,
-    rgba(10, 14, 22, 0.12) 100%
+    rgb(10 14 22 / 12%) 100%
   );
+  pointer-events: none;
 }
 
-.hero-content {
+.home-page .hero-content {
   position: relative;
   z-index: 1;
   width: 100%;
@@ -98,14 +102,14 @@
   animation: veloxFadeUp 0.8s ease both;
 }
 
-.hero-content .eyebrow {
+.home-page .hero-content .eyebrow {
   margin-bottom: 25px;
   color: #a9c1ff;
 }
 
-.hero-content h1 {
+.home-page .hero-content h1 {
   margin: 0;
-  color: #ffffff;
+  color: #fff;
   font-family: "Bodoni Moda", Georgia, serif;
   font-size: clamp(56px, 7vw, 100px);
   font-weight: 400;
@@ -113,45 +117,77 @@
   line-height: 1.02;
 }
 
-.hero-content h1 span,
-.section-heading h2 span,
-.experience-content h2 span,
-.booking-section h2 span {
-  color: var(--velox-blue);
+.home-page .hero-content h1 span {
+  color: #a9c1ff;
   font-style: italic;
 }
 
-.hero-content h1 span {
-  color: #a9c1ff;
-}
-
-.hero-description {
+.home-page .hero-description {
   max-width: 470px;
   margin: 27px 0 32px;
-  color: rgba(255, 255, 255, 0.82);
+  color: rgb(255 255 255 / 82%);
   font-size: 14px;
   line-height: 1.9;
 }
 
-.hero-actions {
+.home-page .hero-actions {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   gap: 13px;
 }
-.hero-actions2 {
+
+.home-page .hero-actions2 {
   display: flex;
-  margin: 4rem;
+  flex-wrap: wrap;
+  align-items: center;
   justify-content: center;
-  flex-wrap: wrap;
-  align-items: center;
   gap: 13px;
+  margin: 4rem 0;
 }
+
+.home-page .hero-location {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  margin-top: 45px;
+  color: rgb(255 255 255 / 80%);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+}
+
+.home-page .location-dot {
+  width: 8px;
+  height: 8px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  background: #8daaff;
+  box-shadow: 0 0 12px rgb(141 170 255 / 60%);
+}
+
+.home-page .hero-bottom {
+  position: absolute;
+  right: 8%;
+  bottom: 27px;
+  left: 8%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding-top: 18px;
+  border-top: 1px solid rgb(255 255 255 / 28%);
+  color: rgb(255 255 255 / 76%);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1.3px;
+}
+
 /* =========================================
    BUTTONS
 ========================================= */
 
-.button {
+.home-page .button {
   display: inline-flex;
   min-height: 52px;
   align-items: center;
@@ -174,94 +210,56 @@
     transform 0.25s ease;
 }
 
-.button span {
+.home-page .button span {
   font-size: 17px;
   transition: transform 0.25s ease;
 }
 
-.button:hover {
+.home-page .button:hover {
   transform: translateY(-3px);
 }
 
-.button:hover span {
+.home-page .button:hover span {
   transform: translate(3px, -2px);
 }
 
-.button-gold {
+.home-page .button-gold {
   background: var(--velox-blue);
-  color: #ffffff !important;
-  box-shadow: 0 7px 18px rgba(36, 87, 230, 0.2);
+  color: #fff !important;
+  box-shadow: 0 7px 18px rgb(36 87 230 / 20%);
 }
 
-.button-gold:hover {
+.home-page .button-gold:hover {
   background: #1946ca;
-  box-shadow: 0 10px 24px rgba(36, 87, 230, 0.28);
+  box-shadow: 0 10px 24px rgb(36 87 230 / 28%);
 }
 
-.button-outline {
-  border-color: rgba(255, 255, 255, 0.48);
-  background: rgba(255, 255, 255, 0.08);
-  color: #ffffff !important;
+.home-page .button-outline {
+  border-color: rgb(255 255 255 / 48%);
+  background: rgb(255 255 255 / 8%);
+  color: #fff !important;
   backdrop-filter: blur(8px);
 }
 
-.button-outline:hover {
-  border-color: #ffffff;
-  background: #ffffff;
+.home-page .button-outline:hover {
+  border-color: #fff;
+  background: #fff;
   color: var(--velox-blue) !important;
-  color: var(--velox-black);
-}
-
-.hero-location {
-  display: flex;
-  align-items: center;
-  gap: 11px;
-  margin-top: 45px;
-  color: rgba(255, 255, 255, 0.8);
-  font-size: 10px;
-  font-weight: 700;
-  letter-spacing: 1.5px;
-}
-
-.location-dot {
-  width: 8px;
-  height: 8px;
-  flex-shrink: 0;
-  border-radius: 50%;
-  background: #8daaff;
-  box-shadow: 0 0 12px rgba(141, 170, 255, 0.6);
-}
-
-.hero-bottom {
-  position: absolute;
-  right: 8%;
-  bottom: 27px;
-  left: 8%;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 20px;
-  padding-top: 18px;
-  border-top: 1px solid rgba(255, 255, 255, 0.28);
-  color: rgba(255, 255, 255, 0.76);
-  font-size: 10px;
-  font-weight: 700;
-  letter-spacing: 1.3px;
 }
 
 /* =========================================
    TRUST / SERVICES SECTION
 ========================================= */
 
-.trust-section {
+.home-page .trust-section {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
   padding: 30px 8%;
   border-bottom: 1px solid var(--velox-border);
-  background: #ffffff;
+  background: #fff;
 }
 
-.trust-item {
+.home-page .trust-item {
   display: flex;
   min-width: 0;
   align-items: center;
@@ -270,16 +268,16 @@
   border-right: 1px solid var(--velox-border);
 }
 
-.trust-item:first-child {
+.home-page .trust-item:first-child {
   padding-left: 0;
 }
 
-.trust-item:last-child {
+.home-page .trust-item:last-child {
   padding-right: 0;
   border-right: none;
 }
 
-.trust-icon {
+.home-page .trust-icon {
   display: flex;
   width: 44px;
   height: 44px;
@@ -297,13 +295,13 @@
     transform 0.25s ease;
 }
 
-.trust-item:hover .trust-icon {
+.home-page .trust-item:hover .trust-icon {
   transform: translateY(-3px);
   background: var(--velox-blue);
-  color: #ffffff;
+  color: #fff;
 }
 
-.trust-item h3 {
+.home-page .trust-item h3 {
   margin: 0 0 6px;
   color: var(--velox-black);
   font-size: 12px;
@@ -311,7 +309,7 @@
   line-height: 1.5;
 }
 
-.trust-item p {
+.home-page .trust-item p {
   margin: 0;
   color: var(--velox-muted);
   font-size: 10px;
@@ -322,7 +320,7 @@
    GENERAL SECTION SPACING
 ========================================= */
 
-.section-padding {
+.home-page .section-padding {
   padding: 100px 8%;
 }
 
@@ -330,27 +328,27 @@
    FLEET SECTION
 ========================================= */
 
-.fleet-section {
-  padding: 10px 40px !important;
+.home-page .fleet-section {
+  padding: 75px 8% 90px;
   background: var(--velox-surface);
 }
 
-.section-heading {
+.home-page .section-heading {
   display: flex;
   align-items: flex-end;
   justify-content: space-between;
   gap: 30px;
-  padding: 10px 40px !important;
-  margin-bottom: 42px;
+  margin: 0 auto 35px;
+  padding: 0;
 }
 
-.section-heading .eyebrow {
+.home-page .section-heading .eyebrow {
   margin-bottom: 13px;
 }
 
-.section-heading h2,
-.experience-content h2,
-.booking-section h2 {
+.home-page .section-heading h2,
+.home-page .experience-content h2,
+.home-page .booking-section h2 {
   margin: 0;
   color: var(--velox-black);
   font-family: "Bodoni Moda", Georgia, serif;
@@ -360,7 +358,14 @@
   line-height: 1.16;
 }
 
-.text-link {
+.home-page .section-heading h2 span,
+.home-page .experience-content h2 span,
+.home-page .booking-section h2 span {
+  color: var(--velox-blue);
+  font-style: italic;
+}
+
+.home-page .text-link {
   display: inline-flex;
   flex-shrink: 0;
   align-items: center;
@@ -375,58 +380,97 @@
     gap 0.25s ease;
 }
 
-.text-link:hover {
+.home-page .text-link:hover {
   gap: 14px;
   color: var(--velox-blue) !important;
 }
 
-.car-grid {
+/* =========================================
+   HOME FLEET CAR GRID
+   Same visual style as Fleet Collection
+========================================= */
+
+.home-page .car-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
+  align-items: stretch;
   gap: 22px;
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
 }
 
 /* =========================================
    CAR CARDS
 ========================================= */
 
-.car-card {
+.home-page .car-card {
+  display: flex;
   min-width: 0;
+  flex-direction: column;
   overflow: hidden;
   border: 1px solid var(--velox-border);
-  border-radius: 15px;
-  background: #ffffff;
-  box-shadow: 0 3px 12px rgba(17, 19, 24, 0.025);
+  border-radius: 13px;
+  background: #fff;
+  box-shadow: 0 3px 12px rgb(17 19 24 / 3%);
   transition:
     transform 0.3s ease,
     border-color 0.3s ease,
     box-shadow 0.3s ease;
 }
 
-.car-card:hover {
-  transform: translateY(-7px);
+.home-page .car-card:hover {
+  transform: translateY(-6px);
   border-color: #cbd7ff;
-  box-shadow: 0 16px 36px rgba(17, 35, 83, 0.09);
+  box-shadow: 0 16px 36px rgb(17 35 83 / 9%);
 }
 
-.car-image-wrapper {
+.home-page .car-image-wrapper {
   position: relative;
-  height: 230px;
+  width: 100%;
+  height: clamp(220px, 18vw, 290px);
   overflow: hidden;
   background: #e9ebef;
 }
 
-.car-image {
+.home-page .car-image {
+  display: block;
   width: 100%;
   height: 100%;
   object-fit: cover;
   transition: transform 0.65s cubic-bezier(0.2, 0.7, 0.2, 1);
 }
 
-.car-card:hover .car-image {
+.home-page .car-card:hover .car-image {
   transform: scale(1.055);
 }
-.car-availability {
+
+/* Category badge */
+
+.home-page .car-category {
+  position: absolute;
+  top: 14px;
+  left: 14px;
+  z-index: 2;
+  max-width: calc(100% - 100px);
+  overflow: hidden;
+  padding: 8px 10px;
+  border: 1px solid rgb(255 255 255 / 60%);
+  border-radius: 5px;
+  background: rgb(255 255 255 / 95%);
+  color: var(--velox-blue);
+  font-size: 8px;
+  font-weight: 800;
+  letter-spacing: 0.8px;
+  text-overflow: ellipsis;
+  text-transform: uppercase;
+  white-space: nowrap;
+  backdrop-filter: blur(8px);
+}
+
+/* Availability badge */
+
+.home-page .car-availability {
   position: absolute;
   top: 14px;
   right: 14px;
@@ -434,36 +478,41 @@
   display: inline-flex;
   align-items: center;
   gap: 7px;
-  padding: 3px 9px;
+  max-width: calc(100% - 28px);
+  padding: 6px 9px;
+  border: 1px solid rgb(255 255 255 / 65%);
+  border-radius: 6px;
   font-family: "Manrope", sans-serif;
-  font-size: 10px;
-  font-weight: 700;
-  letter-spacing: 0.06em;
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 0.04em;
   text-transform: uppercase;
-  border-radius: 10px;
-  border: 1px solid rgba(255, 255, 255, 0.12);
   backdrop-filter: blur(8px);
 }
 
-.is-available {
-  color: #0c92ff;
-  background: rgba(235, 241, 237, 0.781);
+.home-page .is-available {
+  background: rgb(255 255 255 / 94%);
+  color: #16834a;
 }
 
-.is-unavailable {
-  color: hwb(355 36% 0%);
-  background: rgba(85, 30, 30, 0.9);
+.home-page .is-unavailable {
+  background: rgb(255 255 255 / 94%);
+  color: #c62838;
 }
 
-.availability-dot {
+.home-page .availability-dot {
   width: 6px;
   height: 6px;
   flex-shrink: 0;
   border-radius: 50%;
   background: currentColor;
-  animation: availabilityPulse 1.5s ease-in-out infinite;
 }
-@keyframes availabilityPulse {
+
+.home-page .is-available .availability-dot {
+  animation: homeAvailabilityPulse 1.5s ease-in-out infinite;
+}
+
+@keyframes homeAvailabilityPulse {
   0% {
     box-shadow: 0 0 0 0 currentColor;
     opacity: 1;
@@ -479,79 +528,75 @@
     opacity: 1;
   }
 }
-.car-category {
-  position: absolute;
-  top: 14px;
-  left: 14px;
-  max-width: calc(100% - 28px);
-  padding: 8px 11px;
-  border: 1px solid rgba(255, 255, 255, 0.45);
-  border-radius: 6px;
-  background: rgba(255, 255, 255, 0.94);
-  color: var(--velox-blue);
-  font-size: 9px;
-  font-weight: 800;
-  letter-spacing: 1px;
-  backdrop-filter: blur(8px);
+
+/* Card information */
+
+.home-page .car-info {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  padding: 20px 19px 17px;
 }
 
-.car-info {
-  padding: 22px 19px 18px;
-}
-
-.car-info h3 {
+.home-page .car-info h3 {
   margin: 0 0 9px;
   color: var(--velox-black);
   font-family: "Bodoni Moda", Georgia, serif;
-  font-size: 20px;
-  font-weight: 600;
+  font-size: 21px;
+  font-weight: 500;
   line-height: 1.4;
+  overflow-wrap: anywhere;
 }
 
-.car-info > p {
-  min-height: 38px;
+.home-page .car-info > p {
+  min-height: 58px;
   margin: 0 0 20px;
   color: var(--velox-muted);
   font-size: 11px;
   line-height: 1.8;
 }
 
-.car-card-bottom {
+/* Price and booking link */
+
+.home-page .car-card-bottom {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 10px;
+  gap: 12px;
+  margin-top: auto;
   padding-top: 16px;
   border-top: 1px solid var(--velox-border);
 }
 
-.car-price {
+.home-page .car-price {
   display: flex;
+  min-width: 0;
   flex-wrap: wrap;
   align-items: baseline;
   gap: 5px;
 }
 
-.car-price strong {
+.home-page .car-price strong {
   color: var(--velox-blue);
   font-size: 16px;
   font-weight: 800;
+  white-space: nowrap;
 }
 
-.car-price span {
+.home-page .car-price span {
   color: var(--velox-muted);
   font-size: 10px;
 }
 
-.car-book-link {
-  display: flex;
+.home-page .car-book-link {
+  display: inline-flex;
   width: 38px;
   height: 38px;
   flex-shrink: 0;
   align-items: center;
   justify-content: center;
   border: 1px solid #dce4ff;
-  border-radius: 9px;
+  border-radius: 8px;
   background: #f1f5ff;
   color: var(--velox-blue) !important;
   font-size: 18px;
@@ -561,32 +606,37 @@
     transform 0.25s ease;
 }
 
-.car-book-link:hover {
+.home-page .car-book-link:hover {
   transform: translateX(2px);
   background: var(--velox-blue);
-  color: #ffffff !important;
+  color: #fff !important;
+}
+
+.home-page .car-book-link:focus-visible {
+  outline: 2px solid var(--velox-blue);
+  outline-offset: 3px;
 }
 
 /* =========================================
    EXPERIENCE SECTION
 ========================================= */
 
-.experience-section {
+.home-page .experience-section {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
   min-height: 570px;
-  background: #ffffff;
+  background: #fff;
 }
 
-.experience-image {
+.home-page .experience-image {
   min-height: 500px;
   background:
-    linear-gradient(0deg, rgba(10, 14, 22, 0.08), rgba(10, 14, 22, 0.02)),
+    linear-gradient(0deg, rgb(10 14 22 / 8%), rgb(10 14 22 / 2%)),
     url("https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?auto=format&fit=crop&w=1400&q=85")
       center / cover no-repeat;
 }
 
-.experience-content {
+.home-page .experience-content {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -594,19 +644,15 @@
   padding: 75px 11%;
 }
 
-.experience-content .eyebrow {
+.home-page .experience-content .eyebrow {
   margin-bottom: 20px;
 }
 
-.experience-content h2 {
+.home-page .experience-content h2 {
   margin-bottom: 22px;
 }
 
-.experience-content h2 span {
-  color: var(--velox-blue);
-}
-
-.experience-content > p:not(.eyebrow) {
+.home-page .experience-content > p:not(.eyebrow) {
   max-width: 480px;
   margin: 0;
   color: var(--velox-muted);
@@ -614,7 +660,7 @@
   line-height: 2;
 }
 
-.experience-list {
+.home-page .experience-list {
   display: flex;
   flex-direction: column;
   gap: 15px;
@@ -623,7 +669,7 @@
   list-style: none;
 }
 
-.experience-list li {
+.home-page .experience-list li {
   position: relative;
   padding-left: 25px;
   color: #353a45;
@@ -631,7 +677,7 @@
   line-height: 1.8;
 }
 
-.experience-list li::before {
+.home-page .experience-list li::before {
   position: absolute;
   top: 1px;
   left: 0;
@@ -652,31 +698,27 @@
    BOOKING CALL TO ACTION
 ========================================= */
 
-.booking-section {
+.home-page .booking-section {
   display: flex;
   flex-direction: column;
   align-items: center;
   padding: 100px 8%;
   background:
-    radial-gradient(
-      ellipse at 50% 0%,
-      rgba(36, 87, 230, 0.08),
-      transparent 60%
-    ),
+    radial-gradient(ellipse at 50% 0%, rgb(36 87 230 / 8%), transparent 60%),
     #f4f6fa;
   text-align: center;
 }
 
-.booking-section .eyebrow {
+.home-page .booking-section .eyebrow {
   margin-bottom: 17px;
 }
 
-.booking-section h2 {
+.home-page .booking-section h2 {
   max-width: 800px;
   margin-bottom: 19px;
 }
 
-.booking-section > p:not(.eyebrow) {
+.home-page .booking-section > p:not(.eyebrow) {
   max-width: 530px;
   margin: 0 0 30px;
   color: var(--velox-muted);
@@ -684,7 +726,7 @@
   line-height: 1.9;
 }
 
-.booking-section .button {
+.home-page .booking-section .button {
   min-width: 220px;
 }
 
@@ -709,20 +751,20 @@
 ========================================= */
 
 @media (min-width: 1600px) {
-  .hero-section,
-  .trust-section,
-  .section-padding,
-  .booking-section {
+  .home-page .hero-section,
+  .home-page .trust-section,
+  .home-page .section-padding,
+  .home-page .booking-section {
     padding-right: max(8%, calc((100vw - 1440px) / 2));
     padding-left: max(8%, calc((100vw - 1440px) / 2));
   }
 
-  .car-grid {
+  .home-page .car-grid {
     gap: 26px;
   }
 
-  .car-image-wrapper {
-    height: clamp(240px, 18vw, 320px);
+  .home-page .car-image-wrapper {
+    height: clamp(245px, 18vw, 320px);
   }
 }
 
@@ -731,34 +773,38 @@
 ========================================= */
 
 @media (max-width: 1200px) {
-  .hero-section {
+  .home-page .hero-section {
     min-height: 650px;
     height: 80vh;
     padding-right: 6%;
     padding-left: 6%;
   }
 
-  .trust-section,
-  .section-padding {
+  .home-page .trust-section,
+  .home-page .section-padding {
     padding-right: 6%;
     padding-left: 6%;
   }
 
-  .car-grid {
+  .home-page .fleet-section {
+    padding: 65px 6% 80px;
+  }
+
+  .home-page .car-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 22px;
   }
 
-  .car-image-wrapper {
+  .home-page .car-image-wrapper {
     height: clamp(220px, 25vw, 300px);
   }
 
-  .trust-item {
+  .home-page .trust-item {
     padding-right: 14px;
     padding-left: 14px;
   }
 
-  .experience-content {
+  .home-page .experience-content {
     padding: 65px 8%;
   }
 }
@@ -768,73 +814,98 @@
 ========================================= */
 
 @media (max-width: 900px) {
-  .hero-section {
+  .home-page .hero-section {
     min-height: 620px;
     height: 78vh;
     padding: 90px 6%;
     background-position: 58% center;
   }
 
-  .hero-content {
+  .home-page .hero-content {
     max-width: 650px;
   }
 
-  .hero-content h1 {
+  .home-page .hero-content h1 {
     font-size: clamp(54px, 8vw, 76px);
   }
 
-  .hero-bottom {
+  .home-page .hero-bottom {
     right: 6%;
     left: 6%;
     font-size: 9px;
     letter-spacing: 1px;
   }
 
-  .trust-section {
+  .home-page .trust-section {
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 0;
     padding: 25px 6%;
   }
 
-  .trust-item {
+  .home-page .trust-item {
     padding: 18px 12px;
     border-right: none;
     border-bottom: 1px solid var(--velox-border);
   }
 
-  .trust-item:nth-child(odd) {
+  .home-page .trust-item:nth-child(odd) {
     padding-left: 0;
   }
 
-  .trust-item:nth-child(even) {
+  .home-page .trust-item:nth-child(even) {
     padding-right: 0;
   }
 
-  .trust-item:nth-last-child(-n + 2) {
+  .home-page .trust-item:nth-last-child(-n + 2) {
     border-bottom: none;
   }
 
-  .section-padding {
+  .home-page .section-padding {
     padding: 80px 6%;
   }
 
-  .section-heading {
+  .home-page .section-heading {
     margin-bottom: 32px;
   }
 
-  .experience-section {
+  .home-page .fleet-section {
+    padding: 60px 6% 75px;
+  }
+
+  .home-page .car-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px;
+  }
+
+  .home-page .car-image-wrapper {
+    height: clamp(200px, 28vw, 260px);
+  }
+
+  .home-page .car-info {
+    padding: 19px 16px 16px;
+  }
+
+  .home-page .car-info h3 {
+    font-size: 20px;
+  }
+
+  .home-page .car-info > p {
+    min-height: 58px;
+  }
+
+  .home-page .experience-section {
     grid-template-columns: 1fr;
   }
 
-  .experience-image {
+  .home-page .experience-image {
     min-height: 400px;
   }
 
-  .experience-content {
+  .home-page .experience-content {
     padding: 65px 8%;
   }
 
-  .booking-section {
+  .home-page .booking-section {
     padding: 80px 6%;
   }
 }
@@ -844,41 +915,41 @@
 ========================================= */
 
 @media (max-width: 600px) {
-  .hero-section {
+  .home-page .hero-section {
     min-height: 650px;
     height: auto;
     padding: 100px 22px 110px;
     background-position: 60% center;
   }
 
-  .hero-section::before {
+  .home-page .hero-section::before {
     position: absolute;
     z-index: -1;
     inset: 0;
-    background: rgba(10, 14, 22, 0.2);
+    background: rgb(10 14 22 / 20%);
     content: "";
   }
 
-  .hero-content .eyebrow {
+  .home-page .hero-content .eyebrow {
     margin-bottom: 20px;
     font-size: 9px;
     letter-spacing: 1.7px;
   }
 
-  .hero-content h1 {
+  .home-page .hero-content h1 {
     font-size: clamp(46px, 12vw, 66px);
     letter-spacing: -1.5px;
     line-height: 1.04;
   }
 
-  .hero-description {
+  .home-page .hero-description {
     max-width: 390px;
     margin: 23px 0 27px;
     font-size: 13px;
     line-height: 1.85;
   }
 
-  .hero-actions {
+  .home-page .hero-actions {
     align-items: stretch;
     flex-direction: column;
     gap: 11px;
@@ -886,20 +957,20 @@
     max-width: 340px;
   }
 
-  .button {
+  .home-page .button {
     width: 100%;
     min-height: 50px;
     padding: 0 17px;
     font-size: 10px;
   }
 
-  .hero-location {
+  .home-page .hero-location {
     margin-top: 30px;
     font-size: 9px;
     letter-spacing: 1px;
   }
 
-  .hero-bottom {
+  .home-page .hero-bottom {
     right: 22px;
     bottom: 20px;
     left: 22px;
@@ -908,133 +979,151 @@
     letter-spacing: 0.5px;
   }
 
-  .trust-section {
+  .home-page .trust-section {
     padding: 16px 22px;
   }
 
-  .trust-item {
+  .home-page .trust-item {
     gap: 10px;
     padding: 16px 8px;
   }
 
-  .trust-icon {
+  .home-page .trust-icon {
     width: 36px;
     height: 36px;
     border-radius: 10px;
     font-size: 17px;
   }
 
-  .trust-item h3 {
+  .home-page .trust-item h3 {
     margin-bottom: 4px;
     font-size: 11px;
   }
 
-  .trust-item p {
+  .home-page .trust-item p {
     font-size: 9px;
   }
 
-  .section-padding {
+  .home-page .section-padding {
     padding: 65px 22px;
   }
 
-  .section-heading {
+  .home-page .fleet-section {
+    padding: 52px 22px 65px;
+  }
+
+  .home-page .section-heading {
     align-items: flex-start;
     flex-direction: column;
     gap: 18px;
-    margin-bottom: 27px;
+    margin-bottom: 25px;
   }
 
-  .section-heading .eyebrow {
+  .home-page .section-heading .eyebrow {
     margin-bottom: 10px;
   }
 
-  .section-heading h2,
-  .experience-content h2,
-  .booking-section h2 {
+  .home-page .section-heading h2,
+  .home-page .experience-content h2,
+  .home-page .booking-section h2 {
     font-size: clamp(34px, 9vw, 45px);
     letter-spacing: -0.8px;
     line-height: 1.15;
   }
 
-  .text-link {
+  .home-page .text-link {
     font-size: 10px;
   }
 
-  .car-grid {
+  .home-page .car-grid {
     grid-template-columns: minmax(0, 1fr);
-    gap: 20px;
+    gap: 19px;
   }
 
-  .car-image-wrapper {
+  .home-page .car-image-wrapper {
     height: clamp(220px, 65vw, 320px);
   }
 
-  .car-info {
-    padding: 21px 18px 18px;
+  .home-page .car-category {
+    top: 12px;
+    left: 12px;
   }
 
-  .car-info h3 {
+  .home-page .car-availability {
+    top: 12px;
+    right: 12px;
+  }
+
+  .home-page .car-info {
+    padding: 19px 16px 16px;
+  }
+
+  .home-page .car-info h3 {
     font-size: 21px;
   }
 
-  .car-info > p {
+  .home-page .car-info > p {
     min-height: auto;
-    margin-bottom: 20px;
+    margin-bottom: 18px;
     font-size: 12px;
   }
 
-  .car-price strong {
+  .home-page .car-card-bottom {
+    gap: 8px;
+  }
+
+  .home-page .car-price strong {
     font-size: 16px;
   }
 
-  .experience-image {
+  .home-page .experience-image {
     min-height: 300px;
   }
 
-  .experience-content {
+  .home-page .experience-content {
     padding: 55px 22px 60px;
   }
 
-  .experience-content .eyebrow {
+  .home-page .experience-content .eyebrow {
     margin-bottom: 16px;
   }
 
-  .experience-content h2 {
+  .home-page .experience-content h2 {
     margin-bottom: 18px;
   }
 
-  .experience-content > p:not(.eyebrow) {
+  .home-page .experience-content > p:not(.eyebrow) {
     font-size: 12px;
   }
 
-  .experience-list {
+  .home-page .experience-list {
     gap: 13px;
     margin: 23px 0 27px;
   }
 
-  .experience-list li {
+  .home-page .experience-list li {
     font-size: 11px;
   }
 
-  .experience-content .button {
+  .home-page .experience-content .button {
     width: auto;
     max-width: 100%;
   }
 
-  .booking-section {
+  .home-page .booking-section {
     padding: 65px 22px;
   }
 
-  .booking-section .eyebrow {
+  .home-page .booking-section .eyebrow {
     margin-bottom: 14px;
   }
 
-  .booking-section > p:not(.eyebrow) {
+  .home-page .booking-section > p:not(.eyebrow) {
     margin-bottom: 25px;
     font-size: 12px;
   }
 
-  .booking-section .button {
+  .home-page .booking-section .button {
     width: 100%;
     max-width: 320px;
   }
@@ -1045,77 +1134,95 @@
 ========================================= */
 
 @media (max-width: 380px) {
-  .hero-section {
+  .home-page .hero-section {
     min-height: 610px;
     padding-right: 17px;
     padding-left: 17px;
   }
 
-  .hero-content h1 {
+  .home-page .hero-content h1 {
     font-size: clamp(40px, 11.5vw, 48px);
   }
 
-  .hero-description {
+  .home-page .hero-description {
     font-size: 12px;
   }
 
-  .hero-bottom {
+  .home-page .hero-bottom {
     right: 17px;
     left: 17px;
     font-size: 7px;
   }
 
-  .trust-section {
+  .home-page .trust-section {
     grid-template-columns: 1fr;
   }
 
-  .trust-item,
-  .trust-item:nth-child(odd),
-  .trust-item:nth-child(even) {
+  .home-page .trust-item,
+  .home-page .trust-item:nth-child(odd),
+  .home-page .trust-item:nth-child(even) {
     padding: 13px 0;
     border-bottom: 1px solid var(--velox-border);
   }
 
-  .trust-item:last-child {
+  .home-page .trust-item:last-child {
     border-bottom: none;
   }
 
-  .trust-item h3 {
+  .home-page .trust-item h3 {
     font-size: 12px;
   }
 
-  .trust-item p {
+  .home-page .trust-item p {
     font-size: 10px;
   }
 
-  .section-padding {
+  .home-page .section-padding {
     padding-right: 17px;
     padding-left: 17px;
   }
 
-  .car-image-wrapper {
-    height: 220px;
+  .home-page .fleet-section {
+    padding-right: 17px;
+    padding-left: 17px;
   }
 
-  .car-info {
-    padding: 18px 15px 15px;
+  .home-page .car-image-wrapper {
+    height: 215px;
   }
 
-  .car-info h3 {
+  .home-page .car-info {
+    padding: 16px 13px 14px;
+  }
+
+  .home-page .car-info h3 {
     font-size: 19px;
   }
 
-  .experience-content {
+  .home-page .car-info > p {
+    font-size: 11px;
+  }
+
+  .home-page .car-price strong {
+    font-size: 14px;
+  }
+
+  .home-page .car-book-link {
+    width: 35px;
+    height: 35px;
+  }
+
+  .home-page .experience-content {
     padding-right: 17px;
     padding-left: 17px;
   }
 
-  .booking-section {
+  .home-page .booking-section {
     padding-right: 17px;
     padding-left: 17px;
   }
 
-  .button {
+  .home-page .button {
     gap: 12px;
   }
 }
@@ -1125,14 +1232,14 @@
 ========================================= */
 
 @media (max-width: 900px) and (orientation: landscape) {
-  .hero-section {
+  .home-page .hero-section {
     min-height: 560px;
     height: auto;
     padding-top: 80px;
     padding-bottom: 100px;
   }
 
-  .hero-content h1 {
+  .home-page .hero-content h1 {
     font-size: clamp(44px, 7vw, 66px);
   }
 }
