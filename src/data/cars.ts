@@ -74,8 +74,8 @@ export const cars: Car[] = [
     image: "/cars-images/p90486105-2023-bmw-760i-1.avif",
     images: [
       "/cars-images/p90486105-2023-bmw-760i-1.avif",
-      "/cars-images/p90486135-2023-bmw-760i-2.avif",
-      "/cars-images/p90486112-2023-bmw-760i-3.avif",
+      "/cars-images/p90486135-2023-bmw-760i-2.jpg",
+      "/cars-images/p90486112-2023-bmw-760i-3.jpg",
     ],
     description:
       "A sophisticated luxury sedan combining advanced technology, outstanding comfort, and powerful performance.",
@@ -102,11 +102,11 @@ export const cars: Car[] = [
     fuel: "Diesel",
     seats: 5,
     luggage: 3,
-    image: "/cars-images/a218141-medium-1.avif",
+    image: "/cars-images/a218141-medium-1.jpg",
     images: [
-      "/cars-images/a218141-medium-1.avif",
-      "/cars-images/a218145-medium-2.avif",
-      "/cars-images/a218136-medium-3.avif",
+      "/cars-images/a218141-medium-1.jpg",
+      "/cars-images/a218145-medium-2.jpg",
+      "/cars-images/a218136-medium-3.jpg",
     ],
     description:
       "Enjoy understated elegance and a smooth driving experience in this premium Audi flagship sedan.",
@@ -131,8 +131,8 @@ export const cars: Car[] = [
     image: "/cars-images/2024-mercedes-benz-1.avif",
     images: [
       "/cars-images/2024-mercedes-benz-1.avif",
-      "/cars-images/2024-mercedes-benz-2.avif",
-      "/cars-images/2024-mercedes-benz-3.avif",
+      "/cars-images/2024-mercedes-benz-2.jpg",
+      "/cars-images/2024-mercedes-benz-3.jpg",
     ],
     description:
       "A premium executive sedan offering comfort, elegance, and confidence for business trips and city drives.",
@@ -157,8 +157,8 @@ export const cars: Car[] = [
     image: "/cars-images/BMW 5 Series-1.avif",
     images: [
       "/cars-images/BMW 5 Series-1.avif",
-      "/cars-images/BMW 5 Series-2.avif",
-      "/cars-images/BMW 5 Series-3.avif",
+      "/cars-images/BMW 5 Series-2.jpg",
+      "/cars-images/BMW 5 Series-3.jpg",
     ],
     description:
       "A sporty executive sedan with precise handling, modern technology, and a refined interior.",
@@ -188,7 +188,7 @@ export const cars: Car[] = [
     image: "/cars-images/Audi-A6-1.avif",
     images: [
       "/cars-images/Audi-A6-1.avif",
-      "/cars-images/Audi-A6-2.avif",
+      "/cars-images/Audi-A6-2.jpg",
       "/cars-images/Audi-A6-3.avif",
     ],
     description:
@@ -240,7 +240,7 @@ export const cars: Car[] = [
     images: [
       "/cars-images/2024-bmw-x5-m60i-1.avif",
       "/cars-images/2024-bmw-x5-m60i-2.avif",
-      "/cars-images/2024-bmw-x5-m60i-3.avif",
+      "/cars-images/2024-bmw-x5-m60i-3.jpg",
     ],
     description:
       "A powerful and spacious premium SUV designed for comfortable journeys and confident road handling.",
@@ -270,7 +270,7 @@ export const cars: Car[] = [
     image: "/cars-images/2025-audi-q7-1.avif",
     images: [
       "/cars-images/2025-audi-q7-1.avif",
-      "/cars-images/2025-audi-q7-2.avif",
+      "/cars-images/2025-audi-q7-2.jpg",
       "/cars-images/2025-audi-q7-3.avif",
     ],
     description:
@@ -348,8 +348,8 @@ export const cars: Car[] = [
     image: "/cars-images/Volkswagen Tiguan-1.avif",
     images: [
       "/cars-images/Volkswagen Tiguan-1.avif",
-      "/cars-images/Volkswagen Tiguan-2.avif",
-      "/cars-images/Volkswagen Tiguan-3.avif",
+      "/cars-images/Volkswagen Tiguan-2.jpg",
+      "/cars-images/Volkswagen Tiguan-3.jpg",
     ],
     description:
       "A practical family SUV with a comfortable interior, generous cargo space, and an easy driving experience.",
@@ -410,8 +410,8 @@ export const cars: Car[] = [
     image: "/cars-images/Toyota-RAV4-1.avif",
     images: [
       "/cars-images/Toyota-RAV4-1.avif",
-      "/cars-images/Toyota-RAV4-2.avif",
-      "/cars-images/Toyota-RAV4-3.avif",
+      "/cars-images/Toyota-RAV4-2.jpg",
+      "/cars-images/Toyota-RAV4-3.jpg",
     ],
     description:
       "A reliable hybrid SUV offering fuel efficiency, practicality, and comfort for longer journeys.",
@@ -441,8 +441,8 @@ export const cars: Car[] = [
     image: "/cars-images/Jeep-Wrangler-1.avif",
     images: [
       "/cars-images/Jeep-Wrangler-1.avif",
-      "/cars-images/Jeep-Wrangler-2.avif",
-      "/cars-images/Jeep-Wrangler-3.avif",
+      "/cars-images/Jeep-Wrangler-2.jpg",
+      "/cars-images/Jeep-Wrangler-3.jpg",
     ],
     description:
       "An iconic adventure vehicle built for outdoor exploration, rugged terrain, and memorable road trips.",
@@ -466,8 +466,8 @@ export const cars: Car[] = [
     luggage: 2,
     image: "/cars-images/2025-porsche-911-carrera-1.avif",
     images: [
-      "/cars-images/2025-porsche-911-carrera-2.avif",
-      "/cars-images/2025-porsche-911-carrera-3.avif",
+      "/cars-images/2025-porsche-911-carrera-2.jpg",
+      "/cars-images/2025-porsche-911-carrera-3.jpg",
     ],
     description:
       "An iconic sports car delivering thrilling acceleration, precision handling, and timeless design.",
@@ -520,11 +520,11 @@ export const cars: Car[] = [
     fuel: "Diesel",
     seats: 5,
     luggage: 3,
-    image: "/cars-images/Volkswagen-Golf-1.avif",
+    image: "/cars-images/Volkswagen-Golf-1.jpg",
     images: [
-      "/cars-images/Volkswagen-Golf-1.avif",
-      "/cars-images/Volkswagen-Golf-2.avif",
-      "/cars-images/Volkswagen-Golf-3.avif",
+      "/cars-images/Volkswagen-Golf-1.jpg",
+      "/cars-images/Volkswagen-Golf-2.jpg",
+      "/cars-images/Volkswagen-Golf-3.jpg",
     ],
     description:
       "A versatile hatchback that is economical, easy to park, and comfortable for daily city travel.",
@@ -554,8 +554,8 @@ export const cars: Car[] = [
     image: "/cars-images/MINI-Cooper-1.avif",
     images: [
       "/cars-images/MINI-Cooper-1.avif",
-      "/cars-images/MINI-Cooper-2.avif",
-      "/cars-images/MINI-Cooper-3.avif",
+      "/cars-images/MINI-Cooper-2.jpg",
+      "/cars-images/MINI-Cooper-3.jpg",
     ],
     description:
       "A distinctive compact car with playful handling, stylish design, and excellent maneuverability in the city.",
@@ -580,8 +580,8 @@ export const cars: Car[] = [
     image: "/cars-images/Lamborghini-Huracán-1.avif",
     images: [
       "/cars-images/Lamborghini-Huracán-1.avif",
-      "/cars-images/Lamborghini-Huracán-2.avif",
-      "/cars-images/Lamborghini-Huracán-3.avif",
+      "/cars-images/Lamborghini-Huracán-2.jpg",
+      "/cars-images/Lamborghini-Huracán-3.jpg",
     ],
     description:
       "An exotic Italian supercar delivering breathtaking performance, dramatic styling, and an unforgettable driving experience.",
